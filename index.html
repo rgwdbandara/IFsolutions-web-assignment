@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="font-[Poppins] bg-white text-gray-800 animate-fadeIn">
+<body class="font-[Poppins] overflow-x-hidden bg-white text-gray-800 animate-fadeIn">
     
 
 <!-- Top Announcement Bar -->
@@ -30,16 +30,16 @@
 
 <!-- Navbar -->
   <header class="sticky top-0 z-50 border-b bg-white/70 backdrop-blur-md">
-    <nav class="flex items-center justify-between px-6 py-4 mx-auto max-w-7xl">
+    <nav class="flex items-center justify-between gap-4 px-4 py-4 mx-auto sm:px-6 max-w-7xl">
 
       <!-- Logo -->
-      <div class="flex items-center gap-3">
+      <a href="#home" class="flex items-center gap-3 transition hover:opacity-80" aria-label="Go to home">
         <div class="flex items-center justify-center">
-          <span class="text-3xl text-white"> 💐 </span>
+          <span class="text-2xl text-white sm:text-3xl"> 💐 </span>
         </div>
 
-        <h1 class="text-3xl font-semibold tracking-wide">Floréa</h1>
-      </div>
+        <h1 class="text-2xl font-semibold tracking-wide sm:text-3xl">Floréa</h1>
+      </a>
 
 
   <!-- Nav Links -->
@@ -76,29 +76,64 @@
         </li>
       </ul>
 
-      <!-- Icons -->
-      <div class="flex items-center gap-5 text-xl">
-        <button type="button" aria-label="Search" class="transition duration-300 hover:-translate-y-1">🔍</button>
-        <button type="button" aria-label="Cart" class="transition duration-300 hover:-translate-y-1">🛒</button>
-      </div>
+          <!-- Icons -->
+          <div class="flex items-center gap-4">
+            <div class="items-center hidden gap-5 text-xl md:flex">
+              <button type="button" aria-label="Search" class="transition duration-300 hover:-translate-y-1">🔍</button>
+              <button type="button" aria-label="Cart" class="transition duration-300 hover:-translate-y-1">🛒</button>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button
+              id="menuBtn"
+              class="px-3 py-2 text-2xl transition duration-300 rounded-md md:hidden hover:bg-gray-100 hover:text-red-500"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              ☰
+            </button>
+          </div>
 
     </nav>
   </header>
+
+  <!-- Mobile Menu (hidden on md+) -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 hidden bg-white md:hidden">
+    <div class="px-6 pt-6 pb-8">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">💐</span>
+          <h2 class="text-xl font-semibold">Floréa</h2>
+        </div>
+        <button id="menuCloseBtn" aria-label="Close menu" class="p-2 transition duration-300 rounded-md hover:bg-gray-100 hover:text-red-500">✕</button>
+      </div>
+
+      <nav class="mt-6">
+        <ul class="flex flex-col gap-4 text-lg font-medium">
+          <li><a href="#home" class="block px-3 py-3 transition duration-300 rounded-xl menu-link hover:bg-gray-100 hover:text-red-500">Home</a></li>
+          <li><a href="#shop" class="block px-3 py-3 transition duration-300 rounded-xl menu-link hover:bg-gray-100 hover:text-red-500">Products</a></li>
+          <li><a href="#blog" class="block px-3 py-3 transition duration-300 rounded-xl menu-link hover:bg-gray-100 hover:text-red-500">Featured</a></li>
+          <li><a href="#pages" class="block px-3 py-3 transition duration-300 rounded-xl menu-link hover:bg-gray-100 hover:text-red-500">Experts</a></li>
+          <li><a href="#contact" class="block px-3 py-3 transition duration-300 rounded-xl menu-link hover:bg-gray-100 hover:text-red-500">Newsletter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
   <main>
 
 
 <!-- 1. Hero Section -->
   <section id="home" class="bg-gradient-to-br from-[#fff7f7] via-white to-[#fff0f0]" data-aos="fade-up" data-aos-duration="1100">
-    <div class="px-6 py-20 mx-auto max-w-7xl animate-slideUp">
+    <div class="px-4 mx-auto py-14 max-w-7xl sm:px-6 sm:py-16 lg:py-20 animate-slideUp">
       <div class="grid items-center gap-10 md:grid-cols-2">
 
         <!-- Left Content -->
         <div>
-          <p class="mb-4 text-sm tracking-widest text-gray-500 uppercase">20% Off For New Members</p>
-          <h1 class="mb-6 text-5xl font-bold leading-tight md:text-6xl">Happy Mother's Day!</h1>
-          <p class="mb-8 text-lg text-gray-600">Beautiful flowers for your loved ones.</p>
-          <button type="button" class="px-8 py-4 font-medium text-white transition duration-300 bg-red-500 rounded-full hover:bg-red-600 hover:-translate-y-1">Start Shopping</button>
+          <p class="mb-4 text-xs tracking-[0.28em] text-gray-500 uppercase sm:text-sm">20% Off For New Members</p>
+          <h1 class="mb-6 text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">Happy Mother's Day!</h1>
+          <p class="mb-8 text-base text-gray-600 sm:text-lg">Handcrafted flower arrangements made for birthdays, celebrations and special moments.</p>
+          <button type="button" class="w-full px-6 py-4 font-medium text-white transition duration-300 bg-red-500 rounded-full sm:w-auto sm:px-8 hover:bg-red-600 hover:-translate-y-1">Browse Flowers</button>
         </div>
 
         <!-- Right Image -->
@@ -106,7 +141,7 @@
           <img
             src="/images/Happy Mother's Day.jpg"
             alt="Arrangement of flowers for Mother's Day"
-            class="w-full shadow-lg rounded-2xl animate-float"
+            class="object-cover w-full h-64 shadow-lg rounded-2xl sm:h-80 lg:h-auto animate-float"
           >
         </div>
       </div>
@@ -115,14 +150,13 @@
 
 
 
-<!-- Features Section -->
+<!-- Features -->
 <section class="py-16 bg-white" data-aos="fade-up" data-aos-duration="1000">
-  <div class="px-6 mx-auto max-w-7xl">
-    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 lg:gap-8">
 
-    <!-- Feature 1 -->
-      <div class="flex items-center gap-4 p-6 transition duration-500 border shadow-sm rounded-2xl hover:shadow-md hover:-translate-y-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="text-4xl">
+      <div class="flex items-center gap-4 p-5 transition duration-300 border soft-card rounded-2xl hover:shadow-md hover:-translate-y-1 sm:p-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="text-3xl sm:text-4xl">
           🚚
         </div>
 
@@ -138,10 +172,9 @@
 
       </div>
 
-    <!-- Feature 2 -->
-      <div class="flex items-center gap-4 p-6 transition duration-500 border shadow-sm rounded-2xl hover:shadow-md hover:-translate-y-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+      <div class="flex items-center gap-4 p-5 transition duration-700 border shadow-sm rounded-2xl hover:shadow-md hover:-translate-y-1 sm:p-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
 
-        <div class="text-4xl">🌸</div>
+        <div class="text-3xl sm:text-4xl">🌸</div>
 
         <div>
           <h3 class="text-lg font-semibold">
@@ -155,10 +188,9 @@
 
       </div>
 
-    <!-- Feature 3 -->
-      <div class="flex items-center gap-4 p-6 transition duration-500 border shadow-sm rounded-2xl hover:shadow-md hover:-translate-y-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <div class="flex items-center gap-4 p-5 transition duration-300 border shadow-sm rounded-xl hover:shadow-md hover:-translate-y-1 sm:p-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
 
-        <div class="text-4xl">
+        <div class="text-3xl sm:text-4xl">
           🎁
         </div>
 
@@ -174,10 +206,9 @@
 
       </div>
 
-    <!-- Feature 4 -->
-      <div class="flex items-center gap-4 p-6 transition duration-500 border shadow-sm rounded-2xl hover:shadow-md hover:-translate-y-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+      <div class="flex items-center gap-4 p-5 transition duration-700 border shadow-sm rounded-3xl hover:shadow-md hover:-translate-y-1 sm:p-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
 
-        <div class="text-4xl">
+        <div class="text-3xl sm:text-4xl">
           💳
         </div>
 
@@ -203,12 +234,12 @@
 <!-- New Products Section -->
 <section class="py-20 bg-[#fafafa]" data-aos="fade-up" data-aos-duration="1100">
 
-  <div class="px-6 mx-auto max-w-7xl">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6">
 
     <!-- Section Heading -->
     <div class="text-center mb-14">
 
-      <h2 class="mb-4 text-4xl font-bold">
+      <h2 class="mb-4 text-3xl font-bold sm:text-4xl">
         New Products
       </h2>
 
@@ -219,15 +250,15 @@
     </div>
 
     <!-- Products Grid -->
-    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 lg:gap-8">
 
-      <!-- Product Card -->
-      <div class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-2xl hover:shadow-xl hover:-translate-y-3" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="0">
+      <div class="overflow-hidden transition duration-300 bg-white soft-card group rounded-3xl hover:shadow-xl hover:-translate-y-3" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="0">
 
         <img
           src="https://images.unsplash.com/photo-1468327768560-75b778cbb551?q=80&w=1000&auto=format&fit=crop"
+          loading="lazy"
           alt="Flower"
-          class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
+          class="object-cover w-full h-56 transition duration-700 sm:h-64 lg:h-72 group-hover:scale-110"
         >
 
         <div class="p-5">
@@ -248,13 +279,13 @@
 
       </div>
 
-      <!-- Product Card -->
-      <div class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-2xl hover:shadow-xl hover:-translate-y-3" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="100">
+      <div class="overflow-hidden transition duration-700 bg-white shadow-sm group rounded-2xl hover:shadow-xl hover:-translate-y-3" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="100">
 
         <img
           src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1000&auto=format&fit=crop"
+          loading="lazy"
           alt="Flower"
-          class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
+          class="object-cover w-full h-56 transition duration-300 sm:h-64 lg:h-72 group-hover:scale-110"
         >
 
         <div class="p-5">
@@ -275,13 +306,13 @@
 
       </div>
 
-      <!-- Product Card -->
-      <div class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-2xl hover:shadow-xl hover:-translate-y-3" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="200">
+      <div class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-xl hover:shadow-xl hover:-translate-y-3" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="200">
 
         <img
           src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?q=80&w=1000&auto=format&fit=crop"
+          loading="lazy"
           alt="Flower"
-          class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
+          class="object-cover w-full h-56 transition duration-700 sm:h-64 lg:h-72 group-hover:scale-110"
         >
 
         <div class="p-5">
@@ -302,13 +333,13 @@
 
       </div>
 
-      <!-- Product Card -->
-      <div class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-2xl hover:shadow-xl hover:-translate-y-3" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="300">
+      <div class="overflow-hidden transition duration-300 bg-white shadow-sm group rounded-2xl hover:shadow-xl hover:-translate-y-3" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="300">
 
         <img
           src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000&auto=format&fit=crop"
+          loading="lazy"
           alt="Flower"
-          class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
+          class="object-cover w-full h-56 transition duration-300 sm:h-64 lg:h-72 group-hover:scale-110"
         >
 
         <div class="p-5">
@@ -342,9 +373,9 @@
 
 <section id="shop" class="py-20 bg-white" data-aos="fade-right" data-aos-duration="1100">
 
-  <div class="px-6 mx-auto max-w-7xl">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6">
 
-    <div class="grid items-center gap-12 md:grid-cols-2">
+    <div class="grid items-center gap-8 md:grid-cols-2 lg:gap-12">
 
       <!-- Left Image -->
       <div>
@@ -352,7 +383,7 @@
         <img
           src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1200&auto=format&fit=crop"
           alt="Flowers"
-          class="w-full h-[500px] object-cover rounded-3xl shadow-lg"
+          class="w-full h-72 object-cover rounded-3xl shadow-lg sm:h-96 lg:h-[500px]"
         >
 
       </div>
@@ -364,7 +395,7 @@
           Special Offer
         </p>
 
-        <h2 class="mb-6 text-4xl font-bold leading-tight md:text-5xl">
+        <h2 class="mb-6 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
           Fresh Flowers For Any Occasion
         </h2>
 
@@ -373,8 +404,8 @@
           Carefully arranged with freshness and beauty in mind.
         </p>
 
-        <button type="button" class="px-8 py-4 font-medium text-white transition duration-300 bg-black rounded-full hover:bg-gray-800 hover:-translate-y-1">
-          Shop Now
+        <button type="button" class="w-full px-6 py-4 font-medium text-white transition duration-300 bg-black rounded-full sm:w-auto sm:px-8 hover:bg-gray-800 hover:-translate-y-1">
+          Explore Collection
         </button>
 
       </div>
@@ -388,12 +419,12 @@
 <!-- Featured Items -->
 <section id="blog" class="py-20 bg-white" data-aos="fade-up" data-aos-duration="1100">
 
-  <div class="px-6 mx-auto max-w-7xl">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6">
 
     <!-- Heading -->
     <div class="text-center mb-14">
 
-      <h2 class="mb-4 text-4xl font-semibold">
+      <h2 class="mb-4 text-3xl font-semibold sm:text-4xl">
         Featured Items
       </h2>
 
@@ -404,7 +435,7 @@
     </div>
 
     <!-- Tabs -->
-    <div class="flex justify-center gap-10 text-lg font-semibold mb-14">
+    <div class="flex flex-wrap justify-center gap-6 text-base font-semibold sm:gap-10 sm:text-lg mb-14">
 
       <button
         class="text-red-500 transition duration-300 tab-btn hover:-translate-y-1"
@@ -430,11 +461,11 @@
     </div>
 
     <div id="new" class="tab-content">
-      <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 lg:gap-8">
         
         <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
           <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
-            <img src="/images/Pink Flower.jpg" alt="Pink flower bouquet" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
+            <img src="/images/Pink Flower.jpg" alt="Pink flower bouquet" class="object-cover w-full h-56 transition duration-700 sm:h-64 lg:h-72 group-hover:scale-110" />
           </div>
 
           <div class="mt-4">
@@ -447,7 +478,7 @@
 
         <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
           <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
-            <img src="/images/Fresh Roses.jpg" alt="Fresh roses bouquet" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
+            <img src="/images/Fresh Roses.jpg" alt="Fresh roses bouquet" class="object-cover w-full h-56 transition duration-700 sm:h-64 lg:h-72 group-hover:scale-110" />
           </div>
 
           <div class="mt-4">
@@ -460,7 +491,7 @@
 
         <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
           <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
-            <img src="/images/Spring Bouquet.jpg" alt="Spring bouquet" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
+            <img src="/images/Spring Bouquet.jpg" alt="Spring bouquet" class="object-cover w-full h-56 transition duration-700 sm:h-64 lg:h-72 group-hover:scale-110" />
           </div>
 
           <div class="mt-4">
@@ -473,7 +504,7 @@
 
         <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
           <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
-            <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000&auto=format&fit=crop" alt="Begonia flowers" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
+            <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000&auto=format&fit=crop" alt="Begonia flowers" class="object-cover w-full h-56 transition duration-700 sm:h-64 lg:h-72 group-hover:scale-110" />
           </div>
 
           <div class="mt-4">
@@ -488,11 +519,11 @@
     </div>
 
     <div id="popular" class="hidden tab-content">
-      <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 lg:gap-8">
 
         <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
           <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
-            <img src="/images/Red Roses.jpg" alt="Red roses bouquet" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
+            <img src="/images/Red Roses.jpg" alt="Red roses bouquet" class="object-cover w-full h-56 transition duration-700 sm:h-64 lg:h-72 group-hover:scale-110" />
           </div>
           
           <div class="mt-4">
@@ -505,7 +536,7 @@
 
         <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
           <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
-            <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=1000&auto=format&fit=crop" alt="Sun flowers" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
+            <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=1000&auto=format&fit=crop" alt="Sun flowers" class="object-cover w-full h-56 transition duration-700 sm:h-64 lg:h-72 group-hover:scale-110" />
           </div>
           
           <div class="mt-4">
@@ -520,11 +551,11 @@
     </div>
 
     <div id="best" class="hidden tab-content">
-      <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 lg:gap-8">
 
         <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
           <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
-            <img src="/images/White Blossom.jpg" alt="White blossom flowers" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
+            <img src="/images/White Blossom.jpg" alt="White blossom flowers" class="object-cover w-full h-56 transition duration-700 sm:h-64 lg:h-72 group-hover:scale-110" />
           </div>
           
           <div class="mt-4">
@@ -537,7 +568,7 @@
 
         <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
           <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
-            <img src="/images/Violet Tulips.jpg" alt="Violet tulips" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
+            <img src="/images/Violet Tulips.jpg" alt="Violet tulips" class="object-cover w-full h-56 transition duration-700 sm:h-64 lg:h-72 group-hover:scale-110" />
           </div>
           
           <div class="mt-4">
@@ -556,18 +587,19 @@
 </section>
 
 
-<!-- Decorative Centered Banner ) -->
+<!-- Customer Quote -->
 <section class="py-8 bg-[#fbf7f6] shadow-[0_0_60px_rgba(255,0,100,0.08)]" data-aos="zoom-in" data-aos-duration="1100">
 
-  <div class="relative px-6 mx-auto max-w-7xl">
+  <div class="relative px-4 mx-auto max-w-7xl sm:px-6">
 
     <img src="/images/left-tulip.png" alt="" class="absolute left-0 hidden w-40 -translate-y-1/2 md:block top-1/2 opacity-90" />
     <img src="/images/right-tulip.png" alt="" class="absolute right-0 hidden w-40 -translate-y-1/2 md:block top-1/2 opacity-90" />
 
     <div class="flex items-center justify-center py-10">
       <div class="max-w-2xl text-center">
-        <p class="mb-2 text-sm text-gray-500"> “Aeris eu pede mollis pretium. Integer tincidunt.
-      Cras dapibus ligula elementum vitae feugiat.”</p>
+        <p class="mb-2 text-sm text-gray-500 sm:text-base"> “We believe every flower tells a story of beauty, passion,
+  and elegance. Our handcrafted floral arrangements are designed
+  to brighten your moments and make every occasion unforgettable.”</p>
         <div class="inline-flex items-center justify-center w-20 h-20 mx-auto my-4 bg-white rounded-full shadow">
           <img src="/images/logo-flower.png" alt="logo" class="w-12 h-12" />
         </div>
@@ -583,7 +615,7 @@
 <!-- Flower Experts Section -->
 <section id="pages" class="py-24 bg-white" data-aos="fade-up" data-aos-duration="1100">
 
-  <div class="px-6 mx-auto max-w-7xl">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6">
 
     <!-- Heading -->
     <div class="mb-16 text-center">
@@ -592,7 +624,7 @@
         Our Team
       </p>
 
-      <h2 class="mb-5 text-5xl font-semibold">
+      <h2 class="mb-5 text-3xl font-semibold sm:text-4xl md:text-5xl">
         Flower Experts
       </h2>
 
@@ -604,16 +636,17 @@
     </div>
 
     <!-- Experts Grid -->
-    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 sm:gap-10">
 
       <!-- Expert -->
       <div class="text-center group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
 
-        <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-full">
+        <div class="relative mx-auto mb-6 overflow-hidden rounded-full w-52 h-52 sm:w-60 sm:h-60 lg:w-64 lg:h-64">
 
           <img
             src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop"
-            alt=""
+            loading="lazy"
+            alt="Flower expert Maria Alonso"
             class="object-cover w-full h-full transition duration-700 group-hover:scale-110"
           >
 
@@ -622,7 +655,7 @@
 
         </div>
 
-        <h3 class="mb-2 text-2xl font-semibold">
+        <h3 class="mb-2 text-xl font-semibold sm:text-2xl">
           Maria Alonso
         </h3>
 
@@ -635,11 +668,12 @@
       <!-- Expert -->
       <div class="text-center group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
 
-        <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-full">
+        <div class="relative mx-auto mb-6 overflow-hidden rounded-full w-52 h-52 sm:w-60 sm:h-60 lg:w-64 lg:h-64">
 
           <img
             src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1000&auto=format&fit=crop"
-            alt=""
+            loading="lazy"
+            alt="Flower expert Sara Wilson"
             class="object-cover w-full h-full transition duration-700 group-hover:scale-110"
           >
 
@@ -647,7 +681,7 @@
 
         </div>
 
-        <h3 class="mb-2 text-2xl font-semibold">
+        <h3 class="mb-2 text-xl font-semibold sm:text-2xl">
           Sara Wilson
         </h3>
 
@@ -660,11 +694,12 @@
       <!-- Expert -->
       <div class="text-center group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
 
-        <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-full">
+        <div class="relative mx-auto mb-6 overflow-hidden rounded-full w-52 h-52 sm:w-60 sm:h-60 lg:w-64 lg:h-64">
 
           <img
             src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop"
-            alt=""
+            loading="lazy"
+            alt="Flower expert David Grace"
             class="object-cover w-full h-full transition duration-700 group-hover:scale-110"
           >
 
@@ -672,7 +707,7 @@
 
         </div>
 
-        <h3 class="mb-2 text-2xl font-semibold">
+        <h3 class="mb-2 text-xl font-semibold sm:text-2xl">
           David Grace
         </h3>
 
@@ -685,11 +720,12 @@
       <!-- Expert -->
       <div class="text-center group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
 
-        <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-full">
+        <div class="relative mx-auto mb-6 overflow-hidden rounded-full w-52 h-52 sm:w-60 sm:h-60 lg:w-64 lg:h-64">
 
           <img
             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop"
-            alt=""
+            loading="lazy"
+            alt="Flower expert Alina Gomez"
             class="object-cover w-full h-full transition duration-700 group-hover:scale-110"
           >
 
@@ -697,7 +733,7 @@
 
         </div>
 
-        <h3 class="mb-2 text-2xl font-semibold">
+        <h3 class="mb-2 text-xl font-semibold sm:text-2xl">
           Alina Gomez
         </h3>
 
@@ -717,7 +753,7 @@
 <!-- Blog Section -->
 <section class="py-24 bg-[#fafafa]" data-aos="fade-up" data-aos-duration="1100">
 
-  <div class="px-6 mx-auto max-w-7xl">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6">
 
     <!-- Heading -->
     <div class="mb-16 text-center">
@@ -726,7 +762,7 @@
         Latest News
       </p>
 
-      <h2 class="mb-5 text-5xl font-semibold">
+      <h2 class="mb-5 text-3xl font-semibold sm:text-4xl md:text-5xl">
         From Our Blog
       </h2>
 
@@ -738,7 +774,7 @@
     </div>
 
     <!-- Blog Grid -->
-    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 sm:gap-8 lg:gap-10">
 
       <!-- Blog Card -->
       <article class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-3xl hover:shadow-2xl hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
@@ -748,8 +784,9 @@
 
           <img
             src="/images/flower-blog-1.jpg"
-            alt=""
-            class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
+            loading="lazy"
+            alt="Flower blog article 1"
+            class="object-cover w-full h-56 transition duration-700 sm:h-64 lg:h-72 group-hover:scale-110"
           >
 
         </div>
@@ -761,7 +798,7 @@
             Flower Beauty
           </p>
 
-          <h3 class="mb-4 text-2xl font-semibold leading-snug transition cursor-pointer hover:text-red-500">
+          <h3 class="mb-4 text-xl font-semibold leading-snug transition cursor-pointer sm:text-2xl hover:text-red-500">
             Creating Elegant Floral Decorations For Every Event
           </h3>
 
@@ -785,7 +822,8 @@
 
           <img
             src="/images/flower-blog-2.jpg"
-            class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
+            loading="lazy"
+            class="object-cover w-full h-56 transition duration-700 sm:h-64 lg:h-72 group-hover:scale-110"
           >
 
         </div>
@@ -796,7 +834,7 @@
             Floral Design
           </p>
 
-          <h3 class="mb-4 text-2xl font-semibold leading-snug transition cursor-pointer hover:text-red-500">
+          <h3 class="mb-4 text-xl font-semibold leading-snug transition cursor-pointer sm:text-2xl hover:text-red-500">
             Beautiful Wedding Flowers With Modern Styling
           </h3>
 
@@ -820,7 +858,8 @@
 
           <img
             src="/images/flower-blog-3.jpg"
-            class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
+            loading="lazy"
+            class="object-cover w-full h-56 transition duration-700 sm:h-64 lg:h-72 group-hover:scale-110"
           >
 
         </div>
@@ -831,7 +870,7 @@
             Flower Trends
           </p>
 
-          <h3 class="mb-4 text-2xl font-semibold leading-snug transition cursor-pointer hover:text-red-500">
+          <h3 class="mb-4 text-xl font-semibold leading-snug transition cursor-pointer sm:text-2xl hover:text-red-500">
             Trending Luxury Flower Arrangements In 2026
           </h3>
 
@@ -858,14 +897,14 @@
 <!-- Newsletter Section -->
 <section id="contact" class="py-24 bg-[#f7f5f2] shadow-[0_0_60px_rgba(255,0,100,0.08)]" data-aos="zoom-in" data-aos-duration="1100">
 
-  <div class="max-w-4xl px-6 mx-auto text-center animate-slideUp">
+  <div class="max-w-4xl px-4 mx-auto text-center sm:px-6 animate-slideUp">
 
     <!-- Heading -->
-    <h2 class="mb-6 text-5xl font-semibold">
+    <h2 class="mb-6 text-3xl font-semibold sm:text-4xl md:text-5xl">
       Join The Colorful Bunch!
     </h2>
 
-    <p class="mb-12 leading-8 text-gray-500">
+    <p class="mb-12 text-sm leading-7 text-gray-500 sm:text-base sm:leading-8">
       Subscribe to our newsletter and receive updates,
       exclusive offers and flower inspirations.
     </p>
@@ -879,13 +918,13 @@
         <input
           type="email"
           placeholder="Your email address"
-          class="w-full text-gray-700 bg-transparent outline-none placeholder:text-gray-400"
+          class="w-full text-sm text-gray-700 bg-transparent outline-none sm:text-base placeholder:text-gray-400"
         >
 
         <!-- Button -->
         <button
           type="submit"
-          class="text-sm font-semibold tracking-widest uppercase transition duration-300 hover:-translate-y-1 hover:text-red-500"
+          class="w-full px-6 py-3 text-sm font-semibold tracking-widest uppercase transition duration-300 rounded-full sm:w-auto hover:-translate-y-1 hover:text-red-500"
         >
           Subscribe
         </button>
@@ -903,15 +942,15 @@
 <!-- Footer -->
 <footer class="bg-[#111111] text-white pt-24 pb-10" data-aos="fade-up" data-aos-duration="1100">
 
-  <div class="px-6 mx-auto max-w-7xl">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6">
 
     <!-- Footer Grid -->
-    <div class="grid grid-cols-1 mb-20 md:grid-cols-2 lg:grid-cols-5 gap-14">
+    <div class="grid grid-cols-1 gap-10 mb-20 md:grid-cols-2 lg:grid-cols-5 lg:gap-14">
 
       <!-- Brand -->
       <div class="lg:col-span-2">
 
-        <h2 class="mb-6 text-4xl font-semibold">
+        <h2 class="mb-6 text-3xl font-semibold sm:text-4xl">
           Floréa
         </h2>
 
@@ -925,19 +964,19 @@
         <div class="flex items-center gap-4">
 
           <a href="#" aria-label="Facebook" class="flex items-center justify-center w-10 h-10 transition border border-gray-600 rounded-full hover:bg-white hover:text-black">
-            F
+            📘
           </a>
 
           <a href="#" aria-label="Twitter" class="flex items-center justify-center w-10 h-10 transition border border-gray-600 rounded-full hover:bg-white hover:text-black">
-            T
+            🐦
           </a>
 
           <a href="#" aria-label="Instagram" class="flex items-center justify-center w-10 h-10 transition border border-gray-600 rounded-full hover:bg-white hover:text-black">
-            I
+            📸
           </a>
 
           <a href="#" aria-label="YouTube" class="flex items-center justify-center w-10 h-10 transition border border-gray-600 rounded-full hover:bg-white hover:text-black">
-            Y
+            ▶
           </a>
 
         </div>
@@ -1032,13 +1071,12 @@
     easing: "ease-out-cubic"
   });
 
+  // Tabs
   const tabs = document.querySelectorAll(".tab-btn");
   const contents = document.querySelectorAll(".tab-content");
 
   tabs.forEach(tab => {
-
     tab.addEventListener("click", () => {
-
       // remove active color
       tabs.forEach(btn => {
         btn.classList.remove("text-red-500");
@@ -1056,11 +1094,44 @@
 
       // show selected content
       const target = document.getElementById(tab.dataset.tab);
-
       target.classList.remove("hidden");
-
     });
+  });
 
+  // Mobile menu behavior
+  const menuBtn = document.getElementById("menuBtn");
+  const menuCloseBtn = document.getElementById("menuCloseBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  function openMobileMenu() {
+    mobileMenu.classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
+    menuBtn.setAttribute("aria-expanded", "true");
+    menuBtn.setAttribute("aria-label", "Close menu");
+  }
+
+  function closeMobileMenu() {
+    mobileMenu.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.setAttribute("aria-label", "Open menu");
+  }
+
+  if (menuBtn) {
+    menuBtn.addEventListener("click", () => {
+      const isHidden = mobileMenu.classList.contains("hidden");
+      if (isHidden) openMobileMenu(); else closeMobileMenu();
+    });
+  }
+
+  if (menuCloseBtn) menuCloseBtn.addEventListener("click", closeMobileMenu);
+
+  // Close mobile menu when a link is clicked
+  const menuLinks = document.querySelectorAll(".menu-link");
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      closeMobileMenu();
+    });
   });
 
 </script>

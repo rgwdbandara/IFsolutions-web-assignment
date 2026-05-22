@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.soft-card {
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+	}
+}
+
 @layer utilities {
 	@keyframes fadeIn {
 		from {
