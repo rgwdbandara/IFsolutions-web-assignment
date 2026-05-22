@@ -1,5 +1,1036 @@
-<link href="./dist/output.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<h1 class="text-5xl font-bold text-red-500">
-  Tailwind Working
-</h1>
+  <title>Flower Shop</title>
+
+  <!-- Tailwind CSS -->
+  <link href="./dist/output.css" rel="stylesheet" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="font-[Poppins] bg-white text-gray-800">
+    
+
+  <!-- Top Announcement Bar -->
+  <div class="py-2 text-sm text-center text-white bg-black">
+    All flower products 20% off. Shop now
+  </div>
+
+<!-- Navbar -->
+  <header class="sticky top-0 z-50 border-b shadow-sm border-white/40 bg-white/70 backdrop-blur-xl">
+    <nav class="flex items-center justify-between px-6 py-4 mx-auto max-w-7xl">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <div class="flex items-center justify-center">
+          <span class="text-3xl text-white"> 💐 </span>
+        </div>
+
+        <h1 class="text-3xl font-semibold tracking-wide">Floréa</h1>
+      </div>
+
+
+  <!-- Nav Links -->
+      <ul class="items-center hidden gap-8 text-sm font-medium md:flex">
+        <li><a href="#home" class="transition hover:text-red-500">Home</a></li>
+        <li><a href="#shop" class="transition hover:text-red-500">Products</a></li>
+        <li><a href="#blog" class="transition hover:text-red-500">Featured</a></li>
+        <li><a href="#pages" class="transition hover:text-red-500">Experts</a></li>
+        <li><a href="#contact" class="transition hover:text-red-500">Newsletter</a></li>
+      </ul>
+
+      <!-- Icons -->
+      <div class="flex items-center gap-5 text-xl">
+        <button type="button" aria-label="Search">🔍</button>
+        <button type="button" aria-label="Cart">🛒</button>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+
+  <!-- 1. Hero Section -->
+  <section id="home" class="bg-[#f7f7f7]">
+    <div class="px-6 py-20 mx-auto max-w-7xl">
+      <div class="grid items-center gap-10 md:grid-cols-2">
+
+        <!-- Left Content -->
+        <div>
+          <p class="mb-4 text-sm tracking-widest text-gray-500 uppercase">20% Off For New Members</p>
+          <h1 class="mb-6 text-5xl font-bold leading-tight md:text-6xl">Happy Mother's Day!</h1>
+          <p class="mb-8 text-lg text-gray-600">Beautiful flowers for your loved ones.</p>
+          <button type="button" class="px-8 py-4 font-medium text-white transition bg-red-500 rounded-full hover:bg-red-600">Start Shopping</button>
+        </div>
+
+        <!-- Right Image -->
+        <div>
+          <img
+            src="/images/Happy Mother's Day.jpg"
+            alt="Arrangement of flowers for Mother's Day"
+            class="w-full shadow-lg rounded-2xl"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- Features Section -->
+<section class="py-16 bg-white">
+  <div class="px-6 mx-auto max-w-7xl">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+    <!-- Feature 1 -->
+      <div class="flex items-center gap-4 p-6 transition border shadow-sm rounded-2xl hover:shadow-md">
+        <div class="text-4xl">
+          🚚
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold">
+            Free Delivery
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            Free shipping for all orders
+          </p>
+        </div>
+
+      </div>
+
+    <!-- Feature 2 -->
+      <div class="flex items-center gap-4 p-6 transition border shadow-sm rounded-2xl hover:shadow-md">
+
+        <div class="text-4xl">🌸</div>
+
+        <div>
+          <h3 class="text-lg font-semibold">
+            Fresh Flowers
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            Premium quality flowers
+          </p>
+        </div>
+
+      </div>
+
+    <!-- Feature 3 -->
+      <div class="flex items-center gap-4 p-6 transition border shadow-sm rounded-2xl hover:shadow-md">
+
+        <div class="text-4xl">
+          🎁
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold">
+            Gift Service
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            Beautiful gift packaging
+          </p>
+        </div>
+
+      </div>
+
+    <!-- Feature 4 -->
+      <div class="flex items-center gap-4 p-6 transition border shadow-sm rounded-2xl hover:shadow-md">
+
+        <div class="text-4xl">
+          💳
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold">
+            Secure Payment
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            100% secure payment system
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- New Products Section -->
+<section class="py-20 bg-[#fafafa]">
+
+  <div class="px-6 mx-auto max-w-7xl">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-14">
+
+      <h2 class="mb-4 text-4xl font-bold">
+        New Products
+      </h2>
+
+      <p class="max-w-2xl mx-auto text-gray-500">
+        Explore our latest collection of beautiful flowers and gifts.
+      </p>
+
+    </div>
+
+    <!-- Products Grid -->
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Product Card -->
+      <div class="overflow-hidden transition duration-300 bg-white shadow-sm rounded-2xl hover:shadow-xl">
+
+        <img
+          src="https://images.unsplash.com/photo-1468327768560-75b778cbb551?q=80&w=1000&auto=format&fit=crop"
+          alt="Flower"
+          class="object-cover w-full h-72"
+        >
+
+        <div class="p-5">
+
+          <div class="mb-2 text-yellow-400">
+            ★★★★★
+          </div>
+
+          <h3 class="mb-2 text-xl font-semibold">
+            Red & White Tulips
+          </h3>
+
+          <p class="font-bold text-red-500">
+            $25.00
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Product Card -->
+      <div class="overflow-hidden transition duration-300 bg-white shadow-sm rounded-2xl hover:shadow-xl">
+
+        <img
+          src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1000&auto=format&fit=crop"
+          alt="Flower"
+          class="object-cover w-full h-72"
+        >
+
+        <div class="p-5">
+
+          <div class="mb-2 text-yellow-400">
+            ★★★★★
+          </div>
+
+          <h3 class="mb-2 text-xl font-semibold">
+            California Poppy
+          </h3>
+
+          <p class="font-bold text-red-500">
+            $30.00
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Product Card -->
+      <div class="overflow-hidden transition duration-300 bg-white shadow-sm rounded-2xl hover:shadow-xl">
+
+        <img
+          src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?q=80&w=1000&auto=format&fit=crop"
+          alt="Flower"
+          class="object-cover w-full h-72"
+        >
+
+        <div class="p-5">
+
+          <div class="mb-2 text-yellow-400">
+            ★★★★★
+          </div>
+
+          <h3 class="mb-2 text-xl font-semibold">
+            Iris Flower
+          </h3>
+
+          <p class="font-bold text-red-500">
+            $40.00
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Product Card -->
+      <div class="overflow-hidden transition duration-300 bg-white shadow-sm rounded-2xl hover:shadow-xl">
+
+        <img
+          src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000&auto=format&fit=crop"
+          alt="Flower"
+          class="object-cover w-full h-72"
+        >
+
+        <div class="p-5">
+
+          <div class="mb-2 text-yellow-400">
+            ★★★★★
+          </div>
+
+          <h3 class="mb-2 text-xl font-semibold">
+            Begonia
+          </h3>
+
+          <p class="font-bold text-red-500">
+            $22.00
+          </p>
+
+        </div>
+
+      </div>
+
+      
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Promotion Section -->
+
+<section id="shop" class="py-20 bg-white">
+
+  <div class="px-6 mx-auto max-w-7xl">
+
+    <div class="grid items-center gap-12 md:grid-cols-2">
+
+      <!-- Left Image -->
+      <div>
+
+        <img
+          src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1200&auto=format&fit=crop"
+          alt="Flowers"
+          class="w-full h-[500px] object-cover rounded-3xl shadow-lg"
+        >
+
+      </div>
+
+      <!-- Right Content -->
+      <div>
+
+        <p class="mb-4 text-sm tracking-widest text-red-500 uppercase">
+          Special Offer
+        </p>
+
+        <h2 class="mb-6 text-4xl font-bold leading-tight md:text-5xl">
+          Fresh Flowers For Any Occasion
+        </h2>
+
+        <p class="mb-8 text-lg leading-relaxed text-gray-600">
+          Surprise your loved ones with our premium flower collections.
+          Carefully arranged with freshness and beauty in mind.
+        </p>
+
+        <button class="px-8 py-4 font-medium text-white transition bg-black rounded-full hover:bg-gray-800">
+          Shop Now
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Featured Items -->
+<section id="blog" class="py-20 bg-white">
+
+  <div class="px-6 mx-auto max-w-7xl">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+
+      <h2 class="mb-4 text-4xl font-semibold">
+        Featured Items
+      </h2>
+
+      <p class="text-sm text-gray-500">
+        A perfect blend of creativity, energy, communication, happiness and love.
+      </p>
+
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex justify-center gap-10 text-lg font-semibold mb-14">
+
+      <button
+        class="text-red-500 tab-btn"
+        data-tab="new"
+      >
+        New
+      </button>
+
+      <button
+        class="text-gray-800 tab-btn"
+        data-tab="popular"
+      >
+        Popular
+      </button>
+
+      <button
+        class="text-gray-800 tab-btn"
+        data-tab="best"
+      >
+        Best Sellers
+      </button>
+
+    </div>
+
+    <div id="new" class="tab-content">
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+
+        <div class="text-center group">
+
+          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
+
+            <img src="/images/Pink Flower.jpg" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
+
+          </div>
+
+          <div class="mt-4">
+            <div class="mb-1 text-sm text-yellow-400">★★★★★</div>
+            <h3 class="font-medium">Pink Flower</h3>
+            <p class="mt-1 font-semibold text-red-500">$18.00</p>
+          </div>
+
+        </div>
+
+        <div class="text-center group">
+
+          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
+
+            <img src="/images/Fresh Roses.jpg" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
+
+          </div>
+
+          <div class="mt-4">
+            <div class="mb-1 text-sm text-yellow-400">★★★★★</div>
+            <h3 class="font-medium">Fresh Roses</h3>
+            <p class="mt-1 font-semibold text-red-500">$22.00</p>
+          </div>
+
+        </div>
+
+        <div class="text-center group">
+
+          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
+
+            <img src="/images/Spring Bouquet.jpg" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
+
+          </div>
+
+          <div class="mt-4">
+            <div class="mb-1 text-sm text-yellow-400">★★★★★</div>
+            <h3 class="font-medium">Spring Bouquet</h3>
+            <p class="mt-1 font-semibold text-red-500">$30.00</p>
+          </div>
+
+        </div>
+
+        <div class="text-center group">
+
+          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
+
+            <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000&auto=format&fit=crop" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
+
+          </div>
+
+          <div class="mt-4">
+            <div class="mb-1 text-sm text-yellow-400">★★★★★</div>
+            <h3 class="font-medium">Begonia Flowers</h3>
+            <p class="mt-1 font-semibold text-red-500">$26.00</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div id="popular" class="hidden tab-content">
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+
+        <div class="text-center group">
+          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
+            <img src="/images/Red Roses.jpg" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
+          </div>
+          <div class="mt-4">
+            <div class="mb-1 text-sm text-yellow-400">★★★★★</div>
+            <h3 class="font-medium">Red Roses</h3>
+            <p class="mt-1 font-semibold text-red-500">$35.00</p>
+          </div>
+        </div>
+
+        <div class="text-center group">
+          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=1000&auto=format&fit=crop" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
+          </div>
+          <div class="mt-4">
+            <div class="mb-1 text-sm text-yellow-400">★★★★★</div>
+            <h3 class="font-medium">Sun Flowers</h3>
+            <p class="mt-1 font-semibold text-red-500">$28.00</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="best" class="hidden tab-content">
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+
+        <div class="text-center group">
+          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
+            <img src="/images/White Blossom.jpg" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
+          </div>
+          <div class="mt-4">
+            <div class="mb-1 text-sm text-yellow-400">★★★★★</div>
+            <h3 class="font-medium">White Blossom</h3>
+            <p class="mt-1 font-semibold text-red-500">$24.00</p>
+          </div>
+        </div>
+
+        <div class="text-center group">
+          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
+            <img src="/images/Violet Tulips.jpg" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
+          </div>
+          <div class="mt-4">
+            <div class="mb-1 text-sm text-yellow-400">★★★★★</div>
+            <h3 class="font-medium">Violet Tulips</h3>
+            <p class="mt-1 font-semibold text-red-500">$32.00</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Decorative Centered Banner ) -->
+<section class="py-8 bg-[#fbf7f6]">
+
+  <div class="relative px-6 mx-auto max-w-7xl">
+
+    <img src="/images/left-tulip.png" alt="" class="absolute left-0 hidden w-40 -translate-y-1/2 md:block top-1/2 opacity-90" />
+    <img src="/images/right-tulip.png" alt="" class="absolute right-0 hidden w-40 -translate-y-1/2 md:block top-1/2 opacity-90" />
+
+    <div class="flex items-center justify-center py-10">
+      <div class="max-w-2xl text-center">
+        <p class="mb-2 text-sm text-gray-500"> “Aeris eu pede mollis pretium. Integer tincidunt.
+      Cras dapibus ligula elementum vitae feugiat.”</p>
+        <div class="inline-flex items-center justify-center w-20 h-20 mx-auto my-4 bg-white rounded-full shadow">
+          <img src="/images/logo-flower.png" alt="logo" class="w-12 h-12" />
+        </div>
+        <p class="text-sm text-gray-700">Tony CFO</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Flower Experts Section -->
+<section id="pages" class="py-24 bg-white">
+
+  <div class="px-6 mx-auto max-w-7xl">
+
+    <!-- Heading -->
+    <div class="mb-16 text-center">
+
+      <p class="uppercase tracking-[0.3em] text-sm text-red-500 mb-4">
+        Our Team
+      </p>
+
+      <h2 class="mb-5 text-5xl font-semibold">
+        Flower Experts
+      </h2>
+
+      <p class="max-w-2xl mx-auto leading-8 text-gray-500">
+        Passionate florists creating elegant flower arrangements
+        with creativity and love.
+      </p>
+
+    </div>
+
+    <!-- Experts Grid -->
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Expert -->
+      <div class="text-center group">
+
+        <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-full">
+
+          <img
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop"
+            alt=""
+            class="object-cover w-full h-full transition duration-700 group-hover:scale-110"
+          >
+
+          <!-- Overlay -->
+          <div class="absolute inset-0 transition duration-500 opacity-0 bg-black/20 group-hover:opacity-100"></div>
+
+        </div>
+
+        <h3 class="mb-2 text-2xl font-semibold">
+          Maria Alonso
+        </h3>
+
+        <p class="text-sm tracking-wide text-gray-500 uppercase">
+          Florist Designer
+        </p>
+
+      </div>
+
+      <!-- Expert -->
+      <div class="text-center group">
+
+        <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-full">
+
+          <img
+            src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1000&auto=format&fit=crop"
+            alt=""
+            class="object-cover w-full h-full transition duration-700 group-hover:scale-110"
+          >
+
+          <div class="absolute inset-0 transition duration-500 opacity-0 bg-black/20 group-hover:opacity-100"></div>
+
+        </div>
+
+        <h3 class="mb-2 text-2xl font-semibold">
+          Sara Wilson
+        </h3>
+
+        <p class="text-sm tracking-wide text-gray-500 uppercase">
+          Creative Artist
+        </p>
+
+      </div>
+
+      <!-- Expert -->
+      <div class="text-center group">
+
+        <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-full">
+
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop"
+            alt=""
+            class="object-cover w-full h-full transition duration-700 group-hover:scale-110"
+          >
+
+          <div class="absolute inset-0 transition duration-500 opacity-0 bg-black/20 group-hover:opacity-100"></div>
+
+        </div>
+
+        <h3 class="mb-2 text-2xl font-semibold">
+          David Grace
+        </h3>
+
+        <p class="text-sm tracking-wide text-gray-500 uppercase">
+          Flower Stylist
+        </p>
+
+      </div>
+
+      <!-- Expert -->
+      <div class="text-center group">
+
+        <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-full">
+
+          <img
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop"
+            alt=""
+            class="object-cover w-full h-full transition duration-700 group-hover:scale-110"
+          >
+
+          <div class="absolute inset-0 transition duration-500 opacity-0 bg-black/20 group-hover:opacity-100"></div>
+
+        </div>
+
+        <h3 class="mb-2 text-2xl font-semibold">
+          Alina Gomez
+        </h3>
+
+        <p class="text-sm tracking-wide text-gray-500 uppercase">
+          Event Florist
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Blog Section -->
+<section class="py-24 bg-[#fafafa]">
+
+  <div class="px-6 mx-auto max-w-7xl">
+
+    <!-- Heading -->
+    <div class="mb-16 text-center">
+
+      <p class="uppercase tracking-[0.3em] text-sm text-red-500 mb-4">
+        Latest News
+      </p>
+
+      <h2 class="mb-5 text-5xl font-semibold">
+        From Our Blog
+      </h2>
+
+      <p class="max-w-2xl mx-auto leading-8 text-gray-500">
+        Discover flower inspiration, decorating ideas and floral stories
+        from our creative team.
+      </p>
+
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Blog Card -->
+      <article class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-3xl hover:shadow-2xl">
+
+        <!-- Image -->
+        <div class="overflow-hidden">
+
+          <img
+            src="/images/flower-blog-1.jpg"
+            alt=""
+            class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
+          >
+
+        </div>
+
+        <!-- Content -->
+        <div class="p-8">
+
+          <p class="mb-4 text-sm tracking-widest text-red-500 uppercase">
+            Flower Beauty
+          </p>
+
+          <h3 class="mb-4 text-2xl font-semibold leading-snug transition cursor-pointer hover:text-red-500">
+            Creating Elegant Floral Decorations For Every Event
+          </h3>
+
+          <p class="mb-6 leading-7 text-gray-500">
+            Explore modern flower styling ideas with premium floral arrangements
+            and creative inspirations.
+          </p>
+
+          <button class="font-medium transition hover:text-red-500">
+            Continue Reading →
+          </button>
+
+        </div>
+
+      </article>
+
+      <!-- Blog Card -->
+      <article class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-3xl hover:shadow-2xl">
+
+        <div class="overflow-hidden">
+
+          <img
+            src="/images/flower-blog-2.jpg"
+            class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
+          >
+
+        </div>
+
+        <div class="p-8">
+
+          <p class="mb-4 text-sm tracking-widest text-red-500 uppercase">
+            Floral Design
+          </p>
+
+          <h3 class="mb-4 text-2xl font-semibold leading-snug transition cursor-pointer hover:text-red-500">
+            Beautiful Wedding Flowers With Modern Styling
+          </h3>
+
+          <p class="mb-6 leading-7 text-gray-500">
+            Elegant bouquets and premium floral combinations for memorable
+            celebrations and special occasions.
+          </p>
+
+          <button class="font-medium transition hover:text-red-500">
+            Continue Reading →
+          </button>
+
+        </div>
+
+      </article>
+
+      <!-- Blog Card -->
+      <article class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-3xl hover:shadow-2xl">
+
+        <div class="overflow-hidden">
+
+          <img
+            src="/images/flower-blog-3.jpg"
+            class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
+          >
+
+        </div>
+
+        <div class="p-8">
+
+          <p class="mb-4 text-sm tracking-widest text-red-500 uppercase">
+            Flower Trends
+          </p>
+
+          <h3 class="mb-4 text-2xl font-semibold leading-snug transition cursor-pointer hover:text-red-500">
+            Trending Luxury Flower Arrangements In 2026
+          </h3>
+
+          <p class="mb-6 leading-7 text-gray-500">
+            Discover the latest premium flower trends with modern colors,
+            elegant bouquets and creative styling.
+          </p>
+
+          <button class="font-medium transition hover:text-red-500">
+            Continue Reading →
+          </button>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Newsletter Section -->
+<section id="contact" class="py-24 bg-[#f7f5f2]">
+
+  <div class="max-w-4xl px-6 mx-auto text-center">
+
+    <!-- Heading -->
+    <h2 class="mb-6 text-5xl font-semibold">
+      Join The Colorful Bunch!
+    </h2>
+
+    <p class="mb-12 leading-8 text-gray-500">
+      Subscribe to our newsletter and receive updates,
+      exclusive offers and flower inspirations.
+    </p>
+
+    <!-- Subscribe Form -->
+    <form class="max-w-2xl mx-auto">
+
+      <div class="flex flex-col items-center gap-4 pb-4 border-b border-gray-400 sm:flex-row">
+
+        <!-- Input -->
+        <input
+          type="email"
+          placeholder="Your email address"
+          class="w-full text-gray-700 bg-transparent outline-none placeholder:text-gray-400"
+        >
+
+        <!-- Button -->
+        <button
+          type="submit"
+          class="text-sm font-semibold tracking-widest uppercase transition hover:text-red-500"
+        >
+          Subscribe
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+
+  </main>
+
+<!-- Footer -->
+<footer class="bg-[#111111] text-white pt-24 pb-10">
+
+  <div class="px-6 mx-auto max-w-7xl">
+
+    <!-- Footer Grid -->
+    <div class="grid grid-cols-1 mb-20 md:grid-cols-2 lg:grid-cols-5 gap-14">
+
+      <!-- Brand -->
+      <div class="lg:col-span-2">
+
+        <h2 class="mb-6 text-4xl font-semibold">
+          Floréa
+        </h2>
+
+        <p class="max-w-md mb-8 leading-8 text-gray-400">
+          A perfect blend of creativity, energy,
+          communication, happiness and love.
+          Let us arrange a smile for you.
+        </p>
+
+        <!-- Social -->
+        <div class="flex items-center gap-4">
+
+          <a href="#" aria-label="Facebook" class="flex items-center justify-center w-10 h-10 transition border border-gray-600 rounded-full hover:bg-white hover:text-black">
+            F
+          </a>
+
+          <a href="#" aria-label="Twitter" class="flex items-center justify-center w-10 h-10 transition border border-gray-600 rounded-full hover:bg-white hover:text-black">
+            T
+          </a>
+
+          <a href="#" aria-label="Instagram" class="flex items-center justify-center w-10 h-10 transition border border-gray-600 rounded-full hover:bg-white hover:text-black">
+            I
+          </a>
+
+          <a href="#" aria-label="YouTube" class="flex items-center justify-center w-10 h-10 transition border border-gray-600 rounded-full hover:bg-white hover:text-black">
+            Y
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Links -->
+      <div>
+
+        <h3 class="mb-6 text-lg font-semibold">
+          Information
+        </h3>
+
+        <ul class="space-y-4 text-gray-400">
+
+          <li><a href="#" class="transition hover:text-white">About Us</a></li>
+          <li><a href="#" class="transition hover:text-white">Delivery</a></li>
+          <li><a href="#" class="transition hover:text-white">Privacy Policy</a></li>
+          <li><a href="#" class="transition hover:text-white">Terms & Conditions</a></li>
+
+        </ul>
+
+      </div>
+
+      <!-- Links -->
+      <div>
+
+        <h3 class="mb-6 text-lg font-semibold">
+          Account
+        </h3>
+
+        <ul class="space-y-4 text-gray-400">
+
+          <li><a href="#" class="transition hover:text-white">My Account</a></li>
+          <li><a href="#" class="transition hover:text-white">Wishlist</a></li>
+          <li><a href="#" class="transition hover:text-white">Cart</a></li>
+          <li><a href="#" class="transition hover:text-white">Shop</a></li>
+
+        </ul>
+
+      </div>
+
+      <!-- Links -->
+      <div>
+
+        <h3 class="mb-6 text-lg font-semibold">
+          Customer Service
+        </h3>
+
+        <ul class="space-y-4 text-gray-400">
+
+          <li><a href="#" class="transition hover:text-white">Help Center</a></li>
+          <li><a href="#" class="transition hover:text-white">Returns</a></li>
+          <li><a href="#" class="transition hover:text-white">Shipping</a></li>
+          <li><a href="#" class="transition hover:text-white">Contact Us</a></li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="flex flex-col items-center justify-between gap-6 pt-8 border-t border-gray-800 md:flex-row">
+
+      <p class="text-sm text-gray-500">
+        © 2026 Floréa. All Rights Reserved.
+      </p>
+
+      <div class="flex items-center gap-4 text-sm text-gray-500">
+
+        <span>Visa</span>
+        <span>MasterCard</span>
+        <span>PayPal</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<script>
+
+  const tabs = document.querySelectorAll(".tab-btn");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+      // remove active color
+      tabs.forEach(btn => {
+        btn.classList.remove("text-red-500");
+        btn.classList.add("text-gray-800");
+      });
+
+      // hide all content
+      contents.forEach(content => {
+        content.classList.add("hidden");
+      });
+
+      // active tab
+      tab.classList.remove("text-gray-800");
+      tab.classList.add("text-red-500");
+
+      // show selected content
+      const target = document.getElementById(tab.dataset.tab);
+
+      target.classList.remove("hidden");
+
+    });
+
+  });
+
+</script>
+
+</body>
+</html>
