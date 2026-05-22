@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Flower Shop</title>
+  <title> 💐 Floréa</title>
 
   <!-- Tailwind CSS -->
   <link href="./dist/output.css" rel="stylesheet" />
@@ -15,18 +15,21 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
 </head>
 
-<body class="font-[Poppins] bg-white text-gray-800">
+<body class="font-[Poppins] bg-white text-gray-800 animate-fadeIn">
     
 
-  <!-- Top Announcement Bar -->
+<!-- Top Announcement Bar -->
   <div class="py-2 text-sm text-center text-white bg-black">
     All flower products 20% off. Shop now
   </div>
 
 <!-- Navbar -->
-  <header class="sticky top-0 z-50 border-b shadow-sm border-white/40 bg-white/70 backdrop-blur-xl">
+  <header class="sticky top-0 z-50 border-b bg-white/70 backdrop-blur-md">
     <nav class="flex items-center justify-between px-6 py-4 mx-auto max-w-7xl">
 
       <!-- Logo -->
@@ -41,17 +44,42 @@
 
   <!-- Nav Links -->
       <ul class="items-center hidden gap-8 text-sm font-medium md:flex">
-        <li><a href="#home" class="transition hover:text-red-500">Home</a></li>
-        <li><a href="#shop" class="transition hover:text-red-500">Products</a></li>
-        <li><a href="#blog" class="transition hover:text-red-500">Featured</a></li>
-        <li><a href="#pages" class="transition hover:text-red-500">Experts</a></li>
-        <li><a href="#contact" class="transition hover:text-red-500">Newsletter</a></li>
+        <li>
+          <a href="#home" class="relative transition group hover:text-red-500">
+            Home
+            <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#shop" class="relative transition group hover:text-red-500">
+            Products
+            <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#blog" class="relative transition group hover:text-red-500">
+            Featured
+            <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#pages" class="relative transition group hover:text-red-500">
+            Experts
+            <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="relative transition group hover:text-red-500">
+            Newsletter
+            <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
       </ul>
 
       <!-- Icons -->
       <div class="flex items-center gap-5 text-xl">
-        <button type="button" aria-label="Search">🔍</button>
-        <button type="button" aria-label="Cart">🛒</button>
+        <button type="button" aria-label="Search" class="transition duration-300 hover:-translate-y-1">🔍</button>
+        <button type="button" aria-label="Cart" class="transition duration-300 hover:-translate-y-1">🛒</button>
       </div>
 
     </nav>
@@ -60,9 +88,9 @@
   <main>
 
 
-  <!-- 1. Hero Section -->
-  <section id="home" class="bg-[#f7f7f7]">
-    <div class="px-6 py-20 mx-auto max-w-7xl">
+<!-- 1. Hero Section -->
+  <section id="home" class="bg-gradient-to-br from-[#fff7f7] via-white to-[#fff0f0]" data-aos="fade-up" data-aos-duration="1100">
+    <div class="px-6 py-20 mx-auto max-w-7xl animate-slideUp">
       <div class="grid items-center gap-10 md:grid-cols-2">
 
         <!-- Left Content -->
@@ -70,7 +98,7 @@
           <p class="mb-4 text-sm tracking-widest text-gray-500 uppercase">20% Off For New Members</p>
           <h1 class="mb-6 text-5xl font-bold leading-tight md:text-6xl">Happy Mother's Day!</h1>
           <p class="mb-8 text-lg text-gray-600">Beautiful flowers for your loved ones.</p>
-          <button type="button" class="px-8 py-4 font-medium text-white transition bg-red-500 rounded-full hover:bg-red-600">Start Shopping</button>
+          <button type="button" class="px-8 py-4 font-medium text-white transition duration-300 bg-red-500 rounded-full hover:bg-red-600 hover:-translate-y-1">Start Shopping</button>
         </div>
 
         <!-- Right Image -->
@@ -78,7 +106,7 @@
           <img
             src="/images/Happy Mother's Day.jpg"
             alt="Arrangement of flowers for Mother's Day"
-            class="w-full shadow-lg rounded-2xl"
+            class="w-full shadow-lg rounded-2xl animate-float"
           >
         </div>
       </div>
@@ -88,12 +116,12 @@
 
 
 <!-- Features Section -->
-<section class="py-16 bg-white">
+<section class="py-16 bg-white" data-aos="fade-up" data-aos-duration="1000">
   <div class="px-6 mx-auto max-w-7xl">
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
 
     <!-- Feature 1 -->
-      <div class="flex items-center gap-4 p-6 transition border shadow-sm rounded-2xl hover:shadow-md">
+      <div class="flex items-center gap-4 p-6 transition duration-500 border shadow-sm rounded-2xl hover:shadow-md hover:-translate-y-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="text-4xl">
           🚚
         </div>
@@ -111,7 +139,7 @@
       </div>
 
     <!-- Feature 2 -->
-      <div class="flex items-center gap-4 p-6 transition border shadow-sm rounded-2xl hover:shadow-md">
+      <div class="flex items-center gap-4 p-6 transition duration-500 border shadow-sm rounded-2xl hover:shadow-md hover:-translate-y-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
 
         <div class="text-4xl">🌸</div>
 
@@ -128,7 +156,7 @@
       </div>
 
     <!-- Feature 3 -->
-      <div class="flex items-center gap-4 p-6 transition border shadow-sm rounded-2xl hover:shadow-md">
+      <div class="flex items-center gap-4 p-6 transition duration-500 border shadow-sm rounded-2xl hover:shadow-md hover:-translate-y-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
 
         <div class="text-4xl">
           🎁
@@ -147,7 +175,7 @@
       </div>
 
     <!-- Feature 4 -->
-      <div class="flex items-center gap-4 p-6 transition border shadow-sm rounded-2xl hover:shadow-md">
+      <div class="flex items-center gap-4 p-6 transition duration-500 border shadow-sm rounded-2xl hover:shadow-md hover:-translate-y-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
 
         <div class="text-4xl">
           💳
@@ -173,7 +201,7 @@
 
 
 <!-- New Products Section -->
-<section class="py-20 bg-[#fafafa]">
+<section class="py-20 bg-[#fafafa]" data-aos="fade-up" data-aos-duration="1100">
 
   <div class="px-6 mx-auto max-w-7xl">
 
@@ -194,12 +222,12 @@
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
 
       <!-- Product Card -->
-      <div class="overflow-hidden transition duration-300 bg-white shadow-sm rounded-2xl hover:shadow-xl">
+      <div class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-2xl hover:shadow-xl hover:-translate-y-3" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="0">
 
         <img
           src="https://images.unsplash.com/photo-1468327768560-75b778cbb551?q=80&w=1000&auto=format&fit=crop"
           alt="Flower"
-          class="object-cover w-full h-72"
+          class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
         >
 
         <div class="p-5">
@@ -221,12 +249,12 @@
       </div>
 
       <!-- Product Card -->
-      <div class="overflow-hidden transition duration-300 bg-white shadow-sm rounded-2xl hover:shadow-xl">
+      <div class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-2xl hover:shadow-xl hover:-translate-y-3" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="100">
 
         <img
           src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1000&auto=format&fit=crop"
           alt="Flower"
-          class="object-cover w-full h-72"
+          class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
         >
 
         <div class="p-5">
@@ -248,12 +276,12 @@
       </div>
 
       <!-- Product Card -->
-      <div class="overflow-hidden transition duration-300 bg-white shadow-sm rounded-2xl hover:shadow-xl">
+      <div class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-2xl hover:shadow-xl hover:-translate-y-3" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="200">
 
         <img
           src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?q=80&w=1000&auto=format&fit=crop"
           alt="Flower"
-          class="object-cover w-full h-72"
+          class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
         >
 
         <div class="p-5">
@@ -275,12 +303,12 @@
       </div>
 
       <!-- Product Card -->
-      <div class="overflow-hidden transition duration-300 bg-white shadow-sm rounded-2xl hover:shadow-xl">
+      <div class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-2xl hover:shadow-xl hover:-translate-y-3" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="300">
 
         <img
           src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000&auto=format&fit=crop"
           alt="Flower"
-          class="object-cover w-full h-72"
+          class="object-cover w-full transition duration-700 h-72 group-hover:scale-110"
         >
 
         <div class="p-5">
@@ -312,7 +340,7 @@
 
 <!-- Promotion Section -->
 
-<section id="shop" class="py-20 bg-white">
+<section id="shop" class="py-20 bg-white" data-aos="fade-right" data-aos-duration="1100">
 
   <div class="px-6 mx-auto max-w-7xl">
 
@@ -345,7 +373,7 @@
           Carefully arranged with freshness and beauty in mind.
         </p>
 
-        <button class="px-8 py-4 font-medium text-white transition bg-black rounded-full hover:bg-gray-800">
+        <button type="button" class="px-8 py-4 font-medium text-white transition duration-300 bg-black rounded-full hover:bg-gray-800 hover:-translate-y-1">
           Shop Now
         </button>
 
@@ -358,7 +386,7 @@
 </section>
 
 <!-- Featured Items -->
-<section id="blog" class="py-20 bg-white">
+<section id="blog" class="py-20 bg-white" data-aos="fade-up" data-aos-duration="1100">
 
   <div class="px-6 mx-auto max-w-7xl">
 
@@ -379,21 +407,21 @@
     <div class="flex justify-center gap-10 text-lg font-semibold mb-14">
 
       <button
-        class="text-red-500 tab-btn"
+        class="text-red-500 transition duration-300 tab-btn hover:-translate-y-1"
         data-tab="new"
       >
         New
       </button>
 
       <button
-        class="text-gray-800 tab-btn"
+        class="text-gray-800 transition duration-300 tab-btn hover:-translate-y-1"
         data-tab="popular"
       >
         Popular
       </button>
 
       <button
-        class="text-gray-800 tab-btn"
+        class="text-gray-800 transition duration-300 tab-btn hover:-translate-y-1"
         data-tab="best"
       >
         Best Sellers
@@ -403,13 +431,10 @@
 
     <div id="new" class="tab-content">
       <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
-
-        <div class="text-center group">
-
-          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
-
-            <img src="/images/Pink Flower.jpg" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
-
+        
+        <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+          <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
+            <img src="/images/Pink Flower.jpg" alt="Pink flower bouquet" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
           </div>
 
           <div class="mt-4">
@@ -420,12 +445,9 @@
 
         </div>
 
-        <div class="text-center group">
-
-          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
-
-            <img src="/images/Fresh Roses.jpg" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
-
+        <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
+            <img src="/images/Fresh Roses.jpg" alt="Fresh roses bouquet" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
           </div>
 
           <div class="mt-4">
@@ -436,12 +458,9 @@
 
         </div>
 
-        <div class="text-center group">
-
-          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
-
-            <img src="/images/Spring Bouquet.jpg" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
-
+        <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
+            <img src="/images/Spring Bouquet.jpg" alt="Spring bouquet" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
           </div>
 
           <div class="mt-4">
@@ -452,12 +471,9 @@
 
         </div>
 
-        <div class="text-center group">
-
-          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
-
-            <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000&auto=format&fit=crop" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
-
+        <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+          <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
+            <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000&auto=format&fit=crop" alt="Begonia flowers" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
           </div>
 
           <div class="mt-4">
@@ -474,26 +490,30 @@
     <div id="popular" class="hidden tab-content">
       <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
 
-        <div class="text-center group">
-          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
-            <img src="/images/Red Roses.jpg" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
+        <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+          <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
+            <img src="/images/Red Roses.jpg" alt="Red roses bouquet" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
           </div>
+          
           <div class="mt-4">
             <div class="mb-1 text-sm text-yellow-400">★★★★★</div>
             <h3 class="font-medium">Red Roses</h3>
             <p class="mt-1 font-semibold text-red-500">$35.00</p>
           </div>
+          
         </div>
 
-        <div class="text-center group">
-          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=1000&auto=format&fit=crop" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
+        <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
+            <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=1000&auto=format&fit=crop" alt="Sun flowers" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
           </div>
+          
           <div class="mt-4">
             <div class="mb-1 text-sm text-yellow-400">★★★★★</div>
             <h3 class="font-medium">Sun Flowers</h3>
             <p class="mt-1 font-semibold text-red-500">$28.00</p>
           </div>
+          
         </div>
 
       </div>
@@ -502,26 +522,30 @@
     <div id="best" class="hidden tab-content">
       <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
 
-        <div class="text-center group">
-          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
-            <img src="/images/White Blossom.jpg" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
+        <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
+            <img src="/images/White Blossom.jpg" alt="White blossom flowers" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
           </div>
+          
           <div class="mt-4">
             <div class="mb-1 text-sm text-yellow-400">★★★★★</div>
             <h3 class="font-medium">White Blossom</h3>
             <p class="mt-1 font-semibold text-red-500">$24.00</p>
           </div>
+
         </div>
 
-        <div class="text-center group">
-          <div class="bg-[#f8f8f8] p-6 rounded-lg overflow-hidden">
-            <img src="/images/Violet Tulips.jpg" alt="" class="object-cover w-full h-56 transition duration-300 group-hover:scale-105" />
+        <div class="text-center transition duration-500 group hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+          <div class="overflow-hidden bg-[#f8f8f8] rounded-lg">
+            <img src="/images/Violet Tulips.jpg" alt="Violet tulips" class="object-cover w-full transition duration-700 h-72 group-hover:scale-110" />
           </div>
+          
           <div class="mt-4">
             <div class="mb-1 text-sm text-yellow-400">★★★★★</div>
             <h3 class="font-medium">Violet Tulips</h3>
             <p class="mt-1 font-semibold text-red-500">$32.00</p>
           </div>
+          
         </div>
 
       </div>
@@ -533,7 +557,7 @@
 
 
 <!-- Decorative Centered Banner ) -->
-<section class="py-8 bg-[#fbf7f6]">
+<section class="py-8 bg-[#fbf7f6] shadow-[0_0_60px_rgba(255,0,100,0.08)]" data-aos="zoom-in" data-aos-duration="1100">
 
   <div class="relative px-6 mx-auto max-w-7xl">
 
@@ -557,7 +581,7 @@
 
 
 <!-- Flower Experts Section -->
-<section id="pages" class="py-24 bg-white">
+<section id="pages" class="py-24 bg-white" data-aos="fade-up" data-aos-duration="1100">
 
   <div class="px-6 mx-auto max-w-7xl">
 
@@ -583,7 +607,7 @@
     <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
 
       <!-- Expert -->
-      <div class="text-center group">
+      <div class="text-center group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
 
         <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-full">
 
@@ -609,7 +633,7 @@
       </div>
 
       <!-- Expert -->
-      <div class="text-center group">
+      <div class="text-center group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
 
         <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-full">
 
@@ -634,7 +658,7 @@
       </div>
 
       <!-- Expert -->
-      <div class="text-center group">
+      <div class="text-center group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
 
         <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-full">
 
@@ -659,7 +683,7 @@
       </div>
 
       <!-- Expert -->
-      <div class="text-center group">
+      <div class="text-center group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
 
         <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-full">
 
@@ -691,7 +715,7 @@
 
 
 <!-- Blog Section -->
-<section class="py-24 bg-[#fafafa]">
+<section class="py-24 bg-[#fafafa]" data-aos="fade-up" data-aos-duration="1100">
 
   <div class="px-6 mx-auto max-w-7xl">
 
@@ -717,7 +741,7 @@
     <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
 
       <!-- Blog Card -->
-      <article class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-3xl hover:shadow-2xl">
+      <article class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-3xl hover:shadow-2xl hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
 
         <!-- Image -->
         <div class="overflow-hidden">
@@ -746,7 +770,7 @@
             and creative inspirations.
           </p>
 
-          <button class="font-medium transition hover:text-red-500">
+          <button type="button" class="font-medium transition duration-300 hover:-translate-y-1 hover:text-red-500">
             Continue Reading →
           </button>
 
@@ -755,7 +779,7 @@
       </article>
 
       <!-- Blog Card -->
-      <article class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-3xl hover:shadow-2xl">
+      <article class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-3xl hover:shadow-2xl hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
 
         <div class="overflow-hidden">
 
@@ -781,7 +805,7 @@
             celebrations and special occasions.
           </p>
 
-          <button class="font-medium transition hover:text-red-500">
+          <button type="button" class="font-medium transition duration-300 hover:-translate-y-1 hover:text-red-500">
             Continue Reading →
           </button>
 
@@ -790,7 +814,7 @@
       </article>
 
       <!-- Blog Card -->
-      <article class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-3xl hover:shadow-2xl">
+      <article class="overflow-hidden transition duration-500 bg-white shadow-sm group rounded-3xl hover:shadow-2xl hover:-translate-y-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
 
         <div class="overflow-hidden">
 
@@ -816,7 +840,7 @@
             elegant bouquets and creative styling.
           </p>
 
-          <button class="font-medium transition hover:text-red-500">
+          <button type="button" class="font-medium transition duration-300 hover:-translate-y-1 hover:text-red-500">
             Continue Reading →
           </button>
 
@@ -832,9 +856,9 @@
 
 
 <!-- Newsletter Section -->
-<section id="contact" class="py-24 bg-[#f7f5f2]">
+<section id="contact" class="py-24 bg-[#f7f5f2] shadow-[0_0_60px_rgba(255,0,100,0.08)]" data-aos="zoom-in" data-aos-duration="1100">
 
-  <div class="max-w-4xl px-6 mx-auto text-center">
+  <div class="max-w-4xl px-6 mx-auto text-center animate-slideUp">
 
     <!-- Heading -->
     <h2 class="mb-6 text-5xl font-semibold">
@@ -861,7 +885,7 @@
         <!-- Button -->
         <button
           type="submit"
-          class="text-sm font-semibold tracking-widest uppercase transition hover:text-red-500"
+          class="text-sm font-semibold tracking-widest uppercase transition duration-300 hover:-translate-y-1 hover:text-red-500"
         >
           Subscribe
         </button>
@@ -877,7 +901,7 @@
   </main>
 
 <!-- Footer -->
-<footer class="bg-[#111111] text-white pt-24 pb-10">
+<footer class="bg-[#111111] text-white pt-24 pb-10" data-aos="fade-up" data-aos-duration="1100">
 
   <div class="px-6 mx-auto max-w-7xl">
 
@@ -997,7 +1021,16 @@
 
 </footer>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 <script>
+
+  AOS.init({
+    duration: 1100,
+    offset: 120,
+    once: true,
+    easing: "ease-out-cubic"
+  });
 
   const tabs = document.querySelectorAll(".tab-btn");
   const contents = document.querySelectorAll(".tab-content");
